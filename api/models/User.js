@@ -39,6 +39,19 @@ module.exports = {
 
             return obj;
         }
+    },
+    //model validation messages definitions
+    validationMessages: { //hand for i18n & l10n
+        names: {
+            required: 'Name is required'
+        },
+        email: {
+            email: 'Provide valid email address',
+            required: 'Email is required'
+        },
+        password: {
+            required: 'Password is required'
+        }
     }
 };
 
