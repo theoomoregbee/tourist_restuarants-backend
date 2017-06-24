@@ -38,7 +38,9 @@ module.exports.policies = {
         '*': false,
         create: true,
         update: ['isAuth', 'isMe'],
-        login: true
+        login: true,
+        token: 'isAuth',
+        logout: 'isAuth'
     },
 
     ReviewController: {
