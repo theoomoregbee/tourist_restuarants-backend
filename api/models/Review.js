@@ -20,6 +20,19 @@ module.exports = {
             type: 'string',
             required: true
         }
+    },
+
+    //model validation messages definitions
+    validationMessages: { //hand for i18n & l10n
+        user: {
+            required: 'User is required'
+        },
+        placeID: {
+            required: 'Place is required'
+        },
+        review: {
+            required: 'Review is required'
+        }
     }
 };
 
