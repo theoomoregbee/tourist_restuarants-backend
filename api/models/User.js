@@ -7,8 +7,38 @@
 
 module.exports = {
 
-  attributes: {
+    attributes: {
+        names: {
+            type: 'string',
+            required: true
+        },
+        email: {
+            type: 'string',
+            email: true,
+            unique: true,
+            required: true
+        },
+        password: {
+            type: 'string',
+            required: true
+        },
+        last_logout: {
+            type: 'string',
+            datetime: true
+        },
+        //used in holding the date token was generated
+        token_gen_date: {
+            type: 'string',
+            datetime: true
+        },
 
-  }
+        //attributes methods
+        toJSON: function () {
+            var obj = this.toObject();
+            delete obj.password;
+
+            return obj;
+        }
+    }
 };
 
