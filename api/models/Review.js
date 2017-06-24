@@ -7,8 +7,19 @@
 
 module.exports = {
 
-  attributes: {
-
-  }
+    attributes: {
+        user: { //the user wants to save a review
+            model: 'user',
+            required: true
+        },
+        placeID: {
+            type: 'string',
+            required: true
+        },
+        review: {
+            type: 'string',
+            required: true
+        }
+    }
 };
 
