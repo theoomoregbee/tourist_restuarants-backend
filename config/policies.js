@@ -48,6 +48,11 @@ module.exports.policies = {
         create: 'isAuth',
         destroy: ['isAuth', 'isMyReview'],
         update: ['isAuth', 'isMyReview']
+    },
+    PublicReviewController: {
+        '*': true,
+        destroy: ['isAuth', 'isMyReview'],
+        update: ['isAuth', 'isMyReview']
     }
 
     // RabbitController: {
